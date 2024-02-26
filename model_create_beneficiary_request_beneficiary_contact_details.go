@@ -277,6 +277,14 @@ return &this
             o.BeneficiaryPostalCode = &v
         }
 
+    func (o CreateBeneficiaryRequestBeneficiaryContactDetails) MarshalJSON() ([]byte, error) {
+    toSerialize,err := o.ToMap()
+    if err != nil {
+    return []byte{}, err
+    }
+    return json.Marshal(toSerialize)
+    }
+
 func (o CreateBeneficiaryRequestBeneficiaryContactDetails) ToMap() (map[string]interface{}, error) {
 toSerialize := map[string]interface{}{}
             if !IsNil(o.BeneficiaryEmail) {

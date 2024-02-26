@@ -13,6 +13,8 @@ package cashfree_payout
 
 import (
 	"encoding/json"
+	"bytes"
+	"fmt"
 )
 
 // checks if the CreateTransferRequest type satisfies the MappedNullable interface at compile time
@@ -263,6 +265,14 @@ return &this
         func (o *CreateTransferRequest) SetFundsourceId(v string) {
             o.FundsourceId = &v
         }
+
+    func (o CreateTransferRequest) MarshalJSON() ([]byte, error) {
+    toSerialize,err := o.ToMap()
+    if err != nil {
+    return []byte{}, err
+    }
+    return json.Marshal(toSerialize)
+    }
 
 func (o CreateTransferRequest) ToMap() (map[string]interface{}, error) {
 toSerialize := map[string]interface{}{}
