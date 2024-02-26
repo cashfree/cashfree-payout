@@ -13,6 +13,8 @@ package cashfree_payout
 
 import (
 	"encoding/json"
+	"bytes"
+	"fmt"
 )
 
 // checks if the CreateBatchTransferRequestTransfersInner type satisfies the MappedNullable interface at compile time
@@ -263,6 +265,14 @@ return &this
         func (o *CreateBatchTransferRequestTransfersInner) SetFundsourceId(v string) {
             o.FundsourceId = &v
         }
+
+    func (o CreateBatchTransferRequestTransfersInner) MarshalJSON() ([]byte, error) {
+    toSerialize,err := o.ToMap()
+    if err != nil {
+    return []byte{}, err
+    }
+    return json.Marshal(toSerialize)
+    }
 
 func (o CreateBatchTransferRequestTransfersInner) ToMap() (map[string]interface{}, error) {
 toSerialize := map[string]interface{}{}

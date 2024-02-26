@@ -243,6 +243,14 @@ return &this
             o.CardTokenPANSequenceNumber = &v
         }
 
+    func (o CreateTransferRequestBeneficiaryDetailsBeneficiaryInstrumentDetailsCardDetails) MarshalJSON() ([]byte, error) {
+    toSerialize,err := o.ToMap()
+    if err != nil {
+    return []byte{}, err
+    }
+    return json.Marshal(toSerialize)
+    }
+
 func (o CreateTransferRequestBeneficiaryDetailsBeneficiaryInstrumentDetailsCardDetails) ToMap() (map[string]interface{}, error) {
 toSerialize := map[string]interface{}{}
             if !IsNil(o.CardToken) {

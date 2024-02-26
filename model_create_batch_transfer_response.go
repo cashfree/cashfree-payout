@@ -141,6 +141,14 @@ return &this
             o.Status = &v
         }
 
+    func (o CreateBatchTransferResponse) MarshalJSON() ([]byte, error) {
+    toSerialize,err := o.ToMap()
+    if err != nil {
+    return []byte{}, err
+    }
+    return json.Marshal(toSerialize)
+    }
+
 func (o CreateBatchTransferResponse) ToMap() (map[string]interface{}, error) {
 toSerialize := map[string]interface{}{}
             if !IsNil(o.BatchTransferId) {
