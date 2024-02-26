@@ -23,7 +23,7 @@ type Beneficiary struct {
         // It displays the unique ID you created to identify the beneficiary.
     BeneficiaryId *string `json:"beneficiary_id,omitempty"`
         // It displays the name of the beneficiary.
-    BeneficaryName *string `json:"beneficary_name,omitempty"`
+    BeneficiaryName *string `json:"beneficiary_name,omitempty"`
     BeneficiaryInstrumentDetails *BeneficiaryBeneficiaryInstrumentDetails `json:"beneficiary_instrument_details,omitempty"`
     BeneficiaryContactDetails *BeneficiaryBeneficiaryContactDetails `json:"beneficiary_contact_details,omitempty"`
         // It displays the current status of the beneficiary. Possible values are as follows - `VERIFIED`: Beneficiary is verified and is available for payouts - `INVALID`: Beneficiary is invalid - `INITIATED`: Beneficiary verification initiated - `CANCELLED`: Beneficiary verification cancelled - `FAILED`: Failed to verify beneficiary - `DELETED`: Beneficiary is deleted
@@ -81,36 +81,36 @@ return &this
             o.BeneficiaryId = &v
         }
 
-        // GetBeneficaryName returns the BeneficaryName field value if set, zero value otherwise.
-        func (o *Beneficiary) GetBeneficaryName() string {
-        if o == nil || IsNil(o.BeneficaryName) {
+        // GetBeneficiaryName returns the BeneficiaryName field value if set, zero value otherwise.
+        func (o *Beneficiary) GetBeneficiaryName() string {
+        if o == nil || IsNil(o.BeneficiaryName) {
         var ret string
         return ret
         }
-            return *o.BeneficaryName
+            return *o.BeneficiaryName
         }
 
-        // GetBeneficaryNameOk returns a tuple with the BeneficaryName field value if set, nil otherwise
+        // GetBeneficiaryNameOk returns a tuple with the BeneficiaryName field value if set, nil otherwise
         // and a boolean to check if the value has been set.
-        func (o *Beneficiary) GetBeneficaryNameOk() (*string, bool) {
-        if o == nil || IsNil(o.BeneficaryName) {
+        func (o *Beneficiary) GetBeneficiaryNameOk() (*string, bool) {
+        if o == nil || IsNil(o.BeneficiaryName) {
             return nil, false
         }
-            return o.BeneficaryName, true
+            return o.BeneficiaryName, true
         }
 
-        // HasBeneficaryName returns a boolean if a field has been set.
-        func (o *Beneficiary) HasBeneficaryName() bool {
-        if o != nil && !IsNil(o.BeneficaryName) {
+        // HasBeneficiaryName returns a boolean if a field has been set.
+        func (o *Beneficiary) HasBeneficiaryName() bool {
+        if o != nil && !IsNil(o.BeneficiaryName) {
         return true
         }
 
         return false
         }
 
-        // SetBeneficaryName gets a reference to the given string and assigns it to the BeneficaryName field.
-        func (o *Beneficiary) SetBeneficaryName(v string) {
-            o.BeneficaryName = &v
+        // SetBeneficiaryName gets a reference to the given string and assigns it to the BeneficiaryName field.
+        func (o *Beneficiary) SetBeneficiaryName(v string) {
+            o.BeneficiaryName = &v
         }
 
         // GetBeneficiaryInstrumentDetails returns the BeneficiaryInstrumentDetails field value if set, zero value otherwise.
@@ -246,8 +246,8 @@ toSerialize := map[string]interface{}{}
             if !IsNil(o.BeneficiaryId) {
             toSerialize["beneficiary_id"] = o.BeneficiaryId
             }
-            if !IsNil(o.BeneficaryName) {
-            toSerialize["beneficary_name"] = o.BeneficaryName
+            if !IsNil(o.BeneficiaryName) {
+            toSerialize["beneficiary_name"] = o.BeneficiaryName
             }
             if !IsNil(o.BeneficiaryInstrumentDetails) {
             toSerialize["beneficiary_instrument_details"] = o.BeneficiaryInstrumentDetails

@@ -23,7 +23,7 @@ type CreateBeneficiaryRequest struct {
         // It is the unique ID you create to identify the beneficiary. Alphanumeric, underscore ( _ ), pipe ( | ), and dot ( . ) are allowed.
     BeneficiaryId string `json:"beneficiary_id"`
         // It is the name of the beneficiary. The maximum character limit is 100. Only alphabets and whitespaces are allowed.
-    BeneficaryName string `json:"beneficary_name"`
+    BeneficiaryName string `json:"beneficiary_name"`
     BeneficiaryInstrumentDetails *CreateBeneficiaryRequestBeneficiaryInstrumentDetails `json:"beneficiary_instrument_details,omitempty"`
     BeneficiaryContactDetails *CreateBeneficiaryRequestBeneficiaryContactDetails `json:"beneficiary_contact_details,omitempty"`
 }
@@ -34,10 +34,10 @@ type CreateBeneficiaryRequest struct {
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewCreateBeneficiaryRequest(beneficiaryId string, beneficaryName string) *CreateBeneficiaryRequest {
+func NewCreateBeneficiaryRequest(beneficiaryId string, beneficiaryName string) *CreateBeneficiaryRequest {
 this := CreateBeneficiaryRequest{}
         this.BeneficiaryId = beneficiaryId
-        this.BeneficaryName = beneficaryName
+        this.BeneficiaryName = beneficiaryName
 return &this
 }
 
@@ -73,28 +73,28 @@ return &this
             o.BeneficiaryId = v
         }
 
-        // GetBeneficaryName returns the BeneficaryName field value
-        func (o *CreateBeneficiaryRequest) GetBeneficaryName() string {
+        // GetBeneficiaryName returns the BeneficiaryName field value
+        func (o *CreateBeneficiaryRequest) GetBeneficiaryName() string {
         if o == nil {
         var ret string
         return ret
         }
 
-            return o.BeneficaryName
+            return o.BeneficiaryName
         }
 
-        // GetBeneficaryNameOk returns a tuple with the BeneficaryName field value
+        // GetBeneficiaryNameOk returns a tuple with the BeneficiaryName field value
         // and a boolean to check if the value has been set.
-        func (o *CreateBeneficiaryRequest) GetBeneficaryNameOk() (*string, bool) {
+        func (o *CreateBeneficiaryRequest) GetBeneficiaryNameOk() (*string, bool) {
         if o == nil {
             return nil, false
         }
-            return &o.BeneficaryName, true
+            return &o.BeneficiaryName, true
         }
 
-        // SetBeneficaryName sets field value
-        func (o *CreateBeneficiaryRequest) SetBeneficaryName(v string) {
-            o.BeneficaryName = v
+        // SetBeneficiaryName sets field value
+        func (o *CreateBeneficiaryRequest) SetBeneficiaryName(v string) {
+            o.BeneficiaryName = v
         }
 
         // GetBeneficiaryInstrumentDetails returns the BeneficiaryInstrumentDetails field value if set, zero value otherwise.
@@ -164,7 +164,7 @@ return &this
 func (o CreateBeneficiaryRequest) ToMap() (map[string]interface{}, error) {
 toSerialize := map[string]interface{}{}
             toSerialize["beneficiary_id"] = o.BeneficiaryId
-            toSerialize["beneficary_name"] = o.BeneficaryName
+            toSerialize["beneficiary_name"] = o.BeneficiaryName
             if !IsNil(o.BeneficiaryInstrumentDetails) {
             toSerialize["beneficiary_instrument_details"] = o.BeneficiaryInstrumentDetails
             }
@@ -180,7 +180,7 @@ return toSerialize, nil
     // that every required field exists as a key in the generic map.
     requiredProperties := []string{
         "beneficiary_id",
-        "beneficary_name",
+        "beneficiary_name",
     }
 
     allProperties := make(map[string]interface{})

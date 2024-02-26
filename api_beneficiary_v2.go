@@ -53,7 +53,7 @@ func PayoutCreateBeneficiary(xApiVersion *string,  xRequestId *string, createBen
 	}
 
 	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"applicate/json"}
+	localVarHTTPContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
@@ -212,7 +212,7 @@ func PayoutCreateBeneficiaryWithContext(ctx context.Context, xApiVersion *string
 	}
 
 	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"applicate/json"}
+	localVarHTTPContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
@@ -243,7 +243,7 @@ if XClientSecret != nil {
 	localVarHeaderParams["x-client-secret"] = *XClientSecret
 }
 
-	localVarHeaderParams["x-sdk-platform"] = "gosdk-0.0.1"
+	localVarHeaderParams["x-sdk-platform"] = "gosdk-0.0.2"
 	req, err := client.prepareRequest(ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -569,7 +569,7 @@ if XClientSecret != nil {
 	localVarHeaderParams["x-client-secret"] = *XClientSecret
 }
 
-	localVarHeaderParams["x-sdk-platform"] = "gosdk-0.0.1"
+	localVarHeaderParams["x-sdk-platform"] = "gosdk-0.0.2"
 	req, err := client.prepareRequest(ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -907,7 +907,7 @@ if XClientSecret != nil {
 	localVarHeaderParams["x-client-secret"] = *XClientSecret
 }
 
-	localVarHeaderParams["x-sdk-platform"] = "gosdk-0.0.1"
+	localVarHeaderParams["x-sdk-platform"] = "gosdk-0.0.2"
 	req, err := client.prepareRequest(ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
